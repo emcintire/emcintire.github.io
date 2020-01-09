@@ -1,0 +1,152 @@
+body {
+    width: 100%;
+    margin: 0;
+    font-family: Sawasdee;
+    background: white;
+}
+
+.cb-slideshow li span {
+
+    width: 100%;
+    height: 90.3%;
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 36s linear infinite 0s;
+}
+
+.cb-slideshow li:nth-child(1) span {
+    background-image: url("https://i.imgur.com/TbxcPLP.jpg")
+}
+.cb-slideshow li:nth-child(2) span {
+    background-image: url("https://i.imgur.com/r6M4uBS.jpg");
+    animation-delay: 6s;
+}
+.cb-slideshow li:nth-child(3) span {
+    background-image: url("https://i.imgur.com/l7Hkeae.jpg");
+    animation-delay: 12s;
+}
+.cb-slideshow li:nth-child(4) span {
+    background-image: url("https://i.imgur.com/38TEx6F.jpg");
+    animation-delay: 18s;
+}
+.cb-slideshow li:nth-child(5) span {
+    background-image: url("https://i.imgur.com/0LWmDqC.jpg");
+    animation-delay: 24s;
+}
+.cb-slideshow li:nth-child(6) span {
+    background-image: url("https://i.imgur.com/rbZXVtr.jpg");
+    animation-delay: 30s;
+}
+
+.cb-slideshow li:nth-child(2) div {
+    animation-delay: 6s;
+}
+.cb-slideshow li:nth-child(3) div {
+    animation-delay: 12s;
+}
+.cb-slideshow li:nth-child(4) div {
+    animation-delay: 18s;
+}
+.cb-slideshow li:nth-child(5) div {
+    animation-delay: 24s;
+}
+.cb-slideshow li:nth-child(6) div {
+    animation-delay: 30s;
+}
+
+@keyframes imageAnimation {
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+.no-cssanimations .cb-slideshow li span{
+	opacity: 1;
+}
+
+
+
+#index-header {
+    margin: 0 0 0 20px;
+    background: white;
+    color: black;
+    padding: 0;
+    float: left;
+    width: auto;
+}
+
+#portfolio-header {
+    margin: 0 0 0 20px;
+    background: white;
+    color: black;
+    padding: 0;
+    float: left;
+    width: auto;
+}
+
+#contact-header {
+    margin: 16px 0 0 20px;
+    background: white;
+    color: black;
+    padding: 0;
+    float: left;
+    width: auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style-type: none;
+}
+
+#index-nav { margin: 0; padding: 0; height: 37px; float: right; }
+#index-nav ul { list-style: none; padding: 0; height: 37px; float: right;}
+#index-nav ul li { margin: 0; margin-right: 40px; display: inline-block; list-style-type: none;
+                   text-align: right; float: left;}
+#index-nav ul li a { display:block; margin:0; padding:8px 20px; color:black; text-decoration:none;}
+#index-nav ul li.active a, #index-nav ul li a:hover { color:#d3d3f9;}
+
+#portfolio-nav { margin: 0; padding: 0; height: 37px; float: right; }
+#portfolio-nav ul { list-style: none; padding: 0; height: 37px; float: right;}
+#portfolio-nav ul li { margin: 0; margin-right: 40px; display: inline-block; list-style-type: none;
+                   text-align: right; float: left;}
+#portfolio-nav ul li a { display: block; margin:0; padding:8px 20px; color:black; text-decoration:none;}
+#portfolio-nav ul li.active a, #portfolio-nav ul li a:hover { color:#d3d3f9;}
+
+#contact-nav { margin: 16px; padding: 0; height: 37px; float: right; }
+#contact-nav ul { list-style: none; padding: 0; height: 37px; float: right;}
+#contact-nav ul li { margin: 0; margin-right: 21px; display: inline-block; list-style-type: none;
+                   text-align: right; float: left;}
+#contact-nav ul li a { display: block; margin:0; padding:8px 28px; color:black; text-decoration:none;}
+#contact-nav ul li.active a, #portfolio-nav ul li a:hover { color:#d3d3f9;}
+
+
+.grid {
+
+    max-width: 100%;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    grid-auto-rows: 200px;
+    grid-gap: 20px;
+    align-items: stretch;
+    justify-items: center;
+  }
+.grid img {
+
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    max-width: 100%;
+}
