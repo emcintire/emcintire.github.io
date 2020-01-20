@@ -6,7 +6,6 @@ body {
 }
 
 .cb-slideshow li span {
-
     width: 100%;
     height: 90.3%;
     position: absolute;
@@ -73,8 +72,6 @@ body {
 	opacity: 1;
 }
 
-
-
 #index-header {
     margin: 0 0 0 20px;
     background: white;
@@ -132,21 +129,100 @@ li {
 #contact-nav ul li a { display: block; margin:0; padding:8px 28px; color:black; text-decoration:none;}
 #contact-nav ul li.active a, #portfolio-nav ul li a:hover { color:#d3d3f9;}
 
-
-.grid {
-
-    max-width: 100%;
-    margin-top: 100px;
+.portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(2, 300px);
-    grid-auto-rows: 200px;
-    grid-gap: 20px;
-    align-items: stretch;
-    justify-items: center;
-  }
-.grid img {
+    grid-auto-columns: 50% 50%;
+    width: 100%;
+}
 
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
-    max-width: 100%;
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.p-img {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .p-img {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  color: #333333;
+  font-size: 40px;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+#photos {
+  /* Prevent vertical gaps */
+  line-height: 0;
+
+  -webkit-column-count: 5;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    5;
+  -moz-column-gap:      0px;
+  column-count:         5;
+  column-gap:           0px;
+}
+
+#photos img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
+}
+
+@media (max-width: 1200px) {
+  #photos {
+  -moz-column-count:    4;
+  -webkit-column-count: 4;
+  column-count:         4;
+  }
+}
+
+@media (max-width: 1000px) {
+  #photos {
+  -moz-column-count:    3;
+  -webkit-column-count: 3;
+  column-count:         3;
+  }
+}
+
+@media (max-width: 800px) {
+  #photos {
+  -moz-column-count:    2;
+  -webkit-column-count: 2;
+  column-count:         2;
+  }
+}
+
+@media (max-width: 400px) {
+  #photos {
+  -moz-column-count:    1;
+  -webkit-column-count: 1;
+  column-count:         1;
+  }
 }
