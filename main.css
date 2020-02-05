@@ -29,7 +29,6 @@
 body {
     width: 100%;
     margin: 0;
-    font-family: Sawasdee;
     font-family: 'Josefin Sans Light';
     background: white;
 }
@@ -165,12 +164,12 @@ li {
   width: 100%;
   display: grid;
   padding-top: 100px;
-  grid-template-columns: 30% auto 30%;
+  grid-template-columns: 50% 50%;
   justify-items: center;
 }
 
 #about-grid img {
-  width: 200px;
+  width: 50%;
   height: auto;
 }
 
@@ -180,6 +179,10 @@ li {
   padding-top: 300px;
   justify-items: center;
 
+}
+
+#a-text {
+  padding-top: 150px;
 }
 
 #c-text {
